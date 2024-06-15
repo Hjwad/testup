@@ -27,7 +27,8 @@ from ZelzalMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical, mc
 import os, requests
 
-    
+mc.set("foo", "bar")
+print(mc.get("foo"))
 @app.on_message(command(["شغل","تشغيل"])
     & filters.group
     & ~BANNED_USERS
