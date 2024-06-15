@@ -26,8 +26,7 @@ from ZelzalMusic.utils.logger import play_logs
 from ZelzalMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical, mc
 import os, requests
-mc.set("foo", "bar")
-print(mc.get("foo"))
+
 
 @app.on_message(command(["شغل","تشغيل"])
     & filters.group
@@ -72,6 +71,8 @@ async def play_commnd(
         if message.reply_to_message
         else None
     )
+    mc.set("foo", "bar")
+print(mc.get("foo"))
     if audio_telegram:
         if audio_telegram.file_size > 104857600:
             return await mystic.edit_text(_["play_5"])
