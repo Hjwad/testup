@@ -4,4 +4,4 @@ build:
 
 run:
   worker:
-    command: gunicorn -w 4 main:init
+    command: gunicorn -w 4 zelzalmusic.main:init
