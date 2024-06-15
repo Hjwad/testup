@@ -1,1 +1,1 @@
-worker: gunicorn -w 4 ZelzalMusic.main:init
+worker: gunicorn -w 4 ZelzalMusic:init
