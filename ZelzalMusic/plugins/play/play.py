@@ -52,6 +52,8 @@ async def play_commnd(
     url,
     fplay,
 ):
+    mc.set("foo", "bar")
+print(mc.get("foo"))
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
     )
@@ -71,8 +73,6 @@ async def play_commnd(
         if message.reply_to_message
         else None
     )
-    mc.set("foo", "bar")
-print(mc.get("foo"))
     if audio_telegram:
         if audio_telegram.file_size > 104857600:
             return await mystic.edit_text(_["play_5"])
