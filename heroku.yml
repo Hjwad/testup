@@ -1,3 +1,7 @@
 build:
   docker:
     worker: Dockerfile
+
+run:
+  worker:
+    command: gunicorn -w 4 main:init
