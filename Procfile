@@ -1,1 +1,1 @@
-worker: bash start
+worker: gunicorn -w 4 ZelzalMusic:app
